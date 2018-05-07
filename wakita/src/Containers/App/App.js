@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import styles from './App.scss';
-console.log(styles);
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
+      <div className={styles.App}>
+        <header className={styles.AppHeader}>
+          <h1 className={styles.AppTitle}>Welcome to React</h1>
         </header>
-        <p className="App-intro">
+        <p className={styles.AppIntro}>
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       </div>
