@@ -6,7 +6,9 @@ const PORT = process.env.PORT || 8080;
 const path = require('path');
 const bodyParser = require('body-parser');
 
-const apiRoutes = require('./routes').apiRoutes;
+// Not sure if routes are needed, will see in future progress
+
+/* const apiRoutes = require('./routes').apiRoutes; */
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -15,7 +17,7 @@ app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-app.use(apiRoutes);
+/* app.use(apiRoutes); */
 
 
 app.use(function (req, res) {
