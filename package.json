@@ -1,0 +1,26 @@
+{
+  "name": "wakita",
+  "version": "1.0.0",
+  "description": "Wakita property management website",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waydanand/Wakita.git"
+  },
+  "author": "daniel ward, andre holguin, wayne song",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/waydanand/Wakita/issues"
+  },
+  "homepage": "https://github.com/waydanand/Wakita#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  }
+}
