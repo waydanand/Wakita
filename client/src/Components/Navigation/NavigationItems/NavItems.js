@@ -8,9 +8,10 @@ const NavItems = () => {
          <ul className={styles.NavItems}>
 
             <NavButton link='/' exact>Home</NavButton>
-            <NavButton link='/agents' exact>Agents</NavButton>
-            <NavButton link='/listings' exact>Listings</NavButton>
-            {/* add more nav links if needed */}
+            <NavButton link='/propertysearch' exact>Property Seach</NavButton>
+            <NavButton link='/sold' exact>Sold</NavButton>
+            <NavButton link='/about' exact>About</NavButton>
+            <NavButton link='/contact' exact>Contact</NavButton>
          </ul>
       </div>
    );
