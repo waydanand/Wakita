@@ -10,7 +10,7 @@ import styles from './App.scss';
 class App extends Component {
   render() {
     return (
-      <div className={styles.grid}>
+      <div className='grid'>
         <Layout>
            <Switch>
             <Route exact path='/' component={Home}/>
