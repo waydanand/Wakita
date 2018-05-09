@@ -5,7 +5,7 @@ const Home = () => {
    return (
       <div>
         <h1>Home Working</h1>
-        <Contact />
+        <Contact title='Have any Questions?'/>
       </div>
    );
 };

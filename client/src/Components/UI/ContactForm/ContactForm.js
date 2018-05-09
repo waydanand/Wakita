@@ -1,26 +1,33 @@
 import React, { Component } from 'react';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
+import styles from './ContactForm.scss';
 
 class ContactForm extends Component {
 
    state={
       userInput:{
          name:{
-            elementtype: 'contact',
+            elementtype: 'topContact',
             elementConfig:{
                type:'text',
                placeholder: 'Name'
+            },
+            validation: {
+               required: true,
             },
             value: '',
             valid: false,
             touched: false
          },
          phone:{
-            elementtype: 'contact',
+            elementtype: 'topContact',
             elementConfig: {
                type: 'tel',
                placeholder: 'Phone #'
+            },
+            validation: {
+               required: true,
             },
             value: '',
             valid: false,
@@ -32,6 +39,10 @@ class ContactForm extends Component {
                type: 'email',
                placeholder: 'Email'
             },
+            validation: {
+               required: true,
+
+            },
             value: '',
             valid: false,
             touched: false
@@ -41,6 +52,9 @@ class ContactForm extends Component {
             elementConfig: {
                type: 'text',
                placeholder: 'Enter your message here...'
+            },
+            validation: {
+               required: true,
             },
             value: '',
             valid: false,
@@ -78,26 +92,27 @@ class ContactForm extends Component {
       }
       console.log(formData);
 
-   }
+   };
    checkValidity =(value, rules) =>{
       let isValid = true;
       if(rules.required){
          isValid = value.trim() !== '' && isValid;
       }
       return isValid;
-   }
+   };
 
    render() {
-      const formElementsArr = [];
-      for(let key in this.state.userInput){
-         formElementsArr.push({
-            id: key,
-            config: this.state.userInput[key]
-         })
-      }
+      let formEl = this.state.userInput;
+      // const formElementsArr = [];
+      // for(let key in this.state.userInput){
+      //    formElementsArr.push({
+      //       id: key,
+      //       config: this.state.userInput[key]
+      //    })
+      // }
       let form =(
-         <form onSubmit={this.contactHandler}>
-            {formElementsArr.map(el =>{
+         <form className={styles.Form} onSubmit={this.contactHandler}>
+            {/* {formElementsArr.map(el =>{
                return(
                   <Input key={el.id}
                      elementtype={el.config.elementtype}
@@ -108,7 +123,41 @@ class ContactForm extends Component {
                      change={(event) => this.contactInputChange(event,el.id)}
                   />
                )
-            })}
+            })} */}
+            <div className={styles.TopDiv}>
+               <Input
+                  elementtype={formEl.name.elementtype}
+                  elementConfig={formEl.name.elementConfig}
+                  value={formEl.name.value}
+                  invalid={!formEl.name.valid}
+                  touched={formEl.name.touch}
+                  change={(event) => this.contactInputChange(event, formEl.name)}
+               />
+               <Input 
+                  formElementtype={formEl.phone.elementtype}
+                  elementConfig={formEl.phone.elementConfig}
+                  value={formEl.phone.value}
+                  invalid={!formEl.phone.valid}
+                  touched={formEl.phone.touch}
+                  change={(event) => this.contactInputChange(event, formEl.phone)}
+               />
+            </div>
+            <Input 
+               elementtype={formEl.email.elementtype}
+               elementConfig={formEl.email.elementConfig}
+               value={formEl.email.value}
+               invalid={!formEl.email.valid}
+               touched={formEl.email.touch}
+               change={(event) => this.contactInputChange(event, formEl.email)}
+            />
+            <Input 
+               elementtype={formEl.message.elementtype}
+               elementConfig={formEl.message.elementConfig}
+               value={formEl.message.value}
+               invalid={!formEl.message.valid}
+               touched={formEl.message.touch}
+               change={(event) => this.contactInputChange(event, formEl.message)}
+            />
             <div>
                <Button btnType='drawBorder' clicked={this.contactHandler} disabled={!this.state.formIsValid}>Submit</Button>
             </div>
@@ -116,7 +165,31 @@ class ContactForm extends Component {
       )
       return (
          <div>
-            {form}
+            <h1 className={styles.Title}>{this.props.title}</h1>
+            <div className={styles.ContactBox}>
+               {form}
+               <div className={styles.Info}>
+                  <h4>Address</h4>
+                  <hr/>
+                  <div>
+                     821 Bowsprit Road Chula Vista, CA 91914 
+                  </div>
+                  <h4>Phone Number</h4>
+                  <hr/>
+                  <div>
+                     <p>Office: 619.267.6025</p>
+                     <p>Fax: 619.267.6040</p>
+                  </div>
+                  <h4>Office Hours</h4>
+                  <hr/>
+                  <div>
+                     <p>Mon-Fri</p>
+                     <p>8:00 AM - 5:30 PM</p>
+                     <p>Sat-Sun</p>
+                     <p>10:00 AM - 4:00 PM</p>
+                  </div>                       
+               </div>
+            </div>
          </div>
       );
    }
