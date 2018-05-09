@@ -1,0 +1,36 @@
+.Input {
+   width: 100%;
+   padding: 10px;
+   box-sizing: border-box;
+}
+.InputEl {
+   border: 1px solid #ccc;
+   background: lighten($color: #535151, $amount: .25);
+   font: inherit;
+   padding: 6px 10px;
+   display: block;
+   width: 100%;
+   box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+   &:focus {
+      outline: none;
+      background: lighten($color: #ccc, $amount: .5);
+      border: 2px solid lightblue;
+   }    
+}
+.InputDiv{
+   position: relative;
+   color: #aaa;
+   font-size: 16px;
+   input{
+      text-indent: 32px;
+   }
+}
+.Invalid{
+   border: 1px solid red;
+   background-color: lighten($color: #df2121, $amount: .3);
+   font: inherit;
+   padding: 6px 10px;
+   display: block;
+   width: 100%;
+   box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+}
