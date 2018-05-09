@@ -14,13 +14,18 @@
    &:focus {
       outline: none;
       background: lighten($color: #ccc, $amount: .5);
-      border: 2px solid lightblue;
+      border: 4px solid lightblue;
    }    
+}
+.TopDiv{
+   width: 40%;
+   display: inline-flex;
 }
 .InputDiv{
    position: relative;
    color: #aaa;
    font-size: 16px;
+   padding: 10px;s
    input{
       text-indent: 32px;
    }

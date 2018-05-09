@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './Input.scss';
 
 const Input = (props) => {
-
    let inputEl = null;
    let inputClasses = [styles.InputEl];
 
@@ -13,16 +12,24 @@ const Input = (props) => {
    switch(props.elementtype){
       case('contact'):
          inputEl = (
-               <div>
                   <div className={styles.InputDiv}>
                     <input className={inputClasses.join(' ')}
                            value={props.value}
                            onChange={props.change}
                            {...props.elementConfig}/>
                   </div>
-               </div>
          )
          break;
+      case('topContact'):
+          inputEl = (
+            <div className={styles.TopDiv}>
+              <input className={inputClasses.join(' ')}
+                value={props.value}
+                onChange={props.change}
+                {...props.elementConfig} />
+            </div>
+          )
+       break;
       case('textarea'):
          inputEl=(
             <div className={styles.InputDiv}>
@@ -35,20 +42,17 @@ const Input = (props) => {
          break;
       default:
          inputEl=(
-               <div>
                   <div className={styles.InputDiv}>
                     <input className={inputClasses.join(' ')}
                            value={props.value}
                            onChange={props.change}
                               {...props.elementConfig} />
-                  </div>
-               </div>
+                  </div>              
          )
    }
 
    return (
-      <div className={styles.Input}>
-            <label className={styles.Title}>{props.title}</label>
+      <div>
                   {inputEl}      
       </div>
    );
