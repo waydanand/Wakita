@@ -4,7 +4,7 @@ import SideBar from '../../Components/Navigation/SideBar/SideBar';
 import Footer from '../../Components/Footer/Footer';
 import styles from './Layout.scss';
 
-class Layout extends Component {
+export default class Layout extends Component {
    state = {
       visible: false
    }
@@ -18,16 +18,16 @@ class Layout extends Component {
    }
    render() {
       return (
-         <div>
-            <Toolbar barToggleClicked={this.sideBarHandler} />
-            <SideBar open={this.state.visible} closed={this.sideBarClosed} />
+         <div className={styles.grid}>
+            <h1>working</h1>
+            <Toolbar barToggleClicked={this.sideBarHandler} className={styles.toolBar}/>
+            <SideBar open={this.state.visible} closed={this.sideBarClosed} /> 
             <main className={styles.mainContainer}>
                {this.props.children}
-            </main>
+            </main>  
             <Footer />
          </div>
       );
    }
 };
 
-export default Layout;
