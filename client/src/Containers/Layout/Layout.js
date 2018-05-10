@@ -18,9 +18,9 @@ export default class Layout extends Component {
    }
    render() {
       return (
-         <div>
+         <div className={styles.grid}>
             <h1>working</h1>
-            <Toolbar barToggleClicked={this.sideBarHandler} />
+            <Toolbar barToggleClicked={this.sideBarHandler} className={styles.toolBar}/>
             <SideBar open={this.state.visible} closed={this.sideBarClosed} /> 
             <main className={styles.mainContainer}>
                {this.props.children}

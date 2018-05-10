@@ -164,7 +164,7 @@ class ContactForm extends Component {
          </form>
       )
       return (
-         <div>
+         <div className={styles.gridItem}>
             <h1 className={styles.Title}>{this.props.title}</h1>
             <div className={styles.ContactBox}>
                {form}

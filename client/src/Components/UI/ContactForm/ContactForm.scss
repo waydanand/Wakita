@@ -1,5 +1,9 @@
+.gridItem {
+  grid-column-start: 2;
+  
+}
 .ContactBox{
-   width: 100%;
+   /* width: 100%; */
    display:flex;
    flex-direction: row;
 }
@@ -7,17 +11,16 @@
   display: inline-block;
 }
 .Form{
-   padding: 30px;
-   width: 400px;
-   flex: 4;
-   margin-right: 10%;
-   margin-left: 5%;
+    
+   flex: 6;
+   /* margin-right: 10%;
+   margin-left: 5%; */
    display: flex;
    flex-direction: column;
 }
 .Info{
-   flex: 1;
-   width: 200px;   
+   flex: 2;
+   /* width: 200px;  */  
    border: 1px solid black;
    box-sizing: border-box;
    padding: 20px;
