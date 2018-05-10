@@ -1,0 +1,17 @@
+.grid {
+    display: grid;
+    display: -ms-grid;
+    grid-template-columns: 8.8% 22% 6% 22% 6% 22% 6%;
+    grid-template-rows: 30% repeat(9, auto);
+}
+.mainContainer {
+    grid-column-start: 2;
+    grid-column-end: 8;
+
+}
+.toolBar {
+    grid-column-start: 1;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
