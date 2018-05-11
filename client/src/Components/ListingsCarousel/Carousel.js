@@ -16,6 +16,7 @@ Slide = (props) => <img {...props} alt='slide' />;
 
 render() {
     let slider;
+    let autoSlide = () => setInterval(() => slider.next(), 6000);
     const Slide = (props) => <img {...props} alt='slide' />;
     const options = {
             resizeDebounce: 250,
@@ -27,9 +28,10 @@ render() {
             threshold: 20,
             loop: true
     };
-        
+    autoSlide();   
 
         return (
+            
             <div className={styles.siemaCarousel}>
                 <ReactSiema {...options} ref={siema => slider = siema}>
                     <Slide src='http://sandiegodreamrealestate.com/wp-content/uploads/sites/208/2018/04/6326-lake-athabaska-pl-007-1024x683.jpg' />
