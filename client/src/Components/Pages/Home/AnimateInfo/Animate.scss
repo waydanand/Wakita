@@ -1,0 +1,28 @@
+.circleDiv {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.leftCircle {
+    background-color: red;
+    width: 100px;
+    height: 200px;
+    border-radius: 100px 0 0 100px;
+    grid-column: 3/4;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.rightCircle {
+    width: 100px;
+    height: 200px;
+    border-radius:0 100px 100px 0;
+    background: yellow;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
