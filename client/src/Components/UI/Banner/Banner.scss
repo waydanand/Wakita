@@ -1,0 +1,18 @@
+.Box{
+   background-color: #4384a3;
+   width: 100%;
+   height: 350px;
+   box-sizing: border-box;
+   padding: 2%;
+   margin-top: 25px;
+   display: flex;
+}
+.Title{
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   text-shadow: #ccc;
+   font-size: 46px;
+   margin: 0;
+}
