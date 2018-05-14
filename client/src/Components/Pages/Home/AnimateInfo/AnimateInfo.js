@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
 import styles from './Animate.scss';
 import { Link } from "react-router-dom";
+import KUTE from 'kute.js';
 
 class AnimateInfo extends Component {
     state={
 
+    }
+
+
+    circleAnimation = e => {
+        e.preventDefault();
+        const leftCircle = document.querySelector('styles.leftCircle')
+        console.log(leftCircle)
+        // KUTE.to('leftCircle', {borderRadius: '100%'}).start();
     }
 
     render() {
@@ -23,8 +32,8 @@ class AnimateInfo extends Component {
                 </div>
 
                 <div className={styles.circleDiv}>
-                    <Link to="/buyer">
-                        <div className={styles.leftCircle}>
+                    <Link to="">
+                        <div className={styles.leftCircle} onClick={e => this.circleAnimation(e)}>
                             <i className="fas fa-dollar-sign"></i>
                         </div>
                     </Link>
