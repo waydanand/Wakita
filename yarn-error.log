@@ -2,13 +2,13 @@ Arguments:
   /usr/local/bin/node /usr/local/bin/yarn start
 
 PATH: 
-  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin:/Users/waynesong21
 
 Yarn version: 
   1.5.1
 
 Node version: 
-  8.11.1
+  6.11.4
 
 Platform: 
   darwin x64
@@ -669,13 +669,14 @@ Trace:
   Exit code: 1
   Command: sh
   Arguments: -c run-p start:server start:client
-  Directory: /Users/MacbookPro/repos/Wakita
+  Directory: /Users/waynesong21/Wakita
   Output:
   
+      at ProcessTermError.Error (native)
       at ProcessTermError.MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
       at new ProcessTermError (/usr/local/lib/node_modules/yarn/lib/cli.js:226:113)
       at ChildProcess.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:30281:17)
-      at emitTwo (events.js:126:13)
-      at ChildProcess.emit (events.js:214:7)
-      at maybeClose (internal/child_process.js:925:16)
-      at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)
+      at emitTwo (events.js:106:13)
+      at ChildProcess.emit (events.js:191:7)
+      at maybeClose (internal/child_process.js:920:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:230:5)

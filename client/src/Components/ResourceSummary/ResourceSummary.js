@@ -31,25 +31,25 @@ class ResourceSummary extends Component {
                 <SummaryCard
                 icon="far fa-money-bill-alt"
                 card="card"
-                cardNum="card1">Finance</SummaryCard>
+                cardNum="cardOne">Finance</SummaryCard>
                 <SummaryCard
                 icon="fas fa-search"
                 card="card"
-                cardNum="card1">Property Search</SummaryCard>
+                cardNum="cardTwo">Property Search</SummaryCard>
                 <SummaryCard
                 icon="fas fa-book"
                 card="card"
-                cardNum="card1">Finance</SummaryCard>
+                cardNum="cardThree">Finance</SummaryCard>
             </div>
             <div className="row">
                 <SummaryCard
                 icon="fas fa-home"
                 card="card"
-                cardNum="card1">Home Buying 101</SummaryCard>
+                cardNum="cardFour">Home Buying 101</SummaryCard>
                 <SummaryCard
                 icon="far fa-money-bill-alt"
                 card="card"
-                cardNum="card1">Finance</SummaryCard>
+                cardNum="cardFive">Finance</SummaryCard>
             </div>
           </div>
         )
